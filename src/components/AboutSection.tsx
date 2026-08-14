@@ -1,53 +1,84 @@
-import { CheckCircle, Award, BookOpen, Users } from "lucide-react";
+import { Cloud, Cpu, ShieldCheck, Terminal, Award } from "lucide-react";
+import fotoProfile from "@/assets/foto-profile.webp";
 
-const bullets = [
-  { icon: Award, text: "6+ tahun pengalaman di bidang DevOps & Cloud" },
-  { icon: BookOpen, text: "Telah melatih 5.000+ developer dengan Docker" },
-  { icon: CheckCircle, text: "Docker Certified Associate (DCA)" },
-  { icon: CheckCircle, text: "Berpengalaman di Kubernetes & Container Orchestration" },
-  { icon: Users, text: "Mentor aktif di komunitas DevOps Indonesia" },
+const skillNotes = [
+  {
+    icon: Cloud,
+    title: "Cloud Computing",
+    desc: "Merancang dan mengelola infrastruktur berbasis cloud secara scalable dan handal.",
+  },
+  {
+    icon: Terminal,
+    title: "DevOps",
+    desc: "Otomatisasi workflow, CI/CD pipeline, containerization (Docker & Kubernetes).",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Cybersecurity Enthusiast",
+    desc: "Keamanan infrastruktur, hardening sistem, dan praktik terbaik cyber defence.",
+  },
+  {
+    icon: Cpu,
+    title: "AI, Machine Learning, Deep Learning",
+    desc: "Penerapan model AI, machine learning, dan arsitektur deep learning untuk solusi modern.",
+  },
 ];
 
 const AboutSection = () => (
   <section id="about" className="section-padding gradient-bg">
     <div className="container mx-auto">
       <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-        {/* Card instructor placeholder */}
+        {/* Card instructor */}
         <div className="glass-card p-8 rounded-2xl text-center">
-          <div
-            className="w-32 h-32 rounded-full mx-auto mb-6 flex items-center justify-center text-5xl font-extrabold"
-            style={{ background: "hsl(var(--primary) / 0.15)", color: "hsl(var(--primary))" }}
-          >
-            🐳
+          <div className="relative w-36 h-36 mx-auto mb-6">
+            <img
+              src={fotoProfile}
+              alt="Foto Instruktur"
+              className="w-full h-full rounded-full object-cover border-4 border-primary/40 shadow-xl"
+            />
+            <div className="absolute bottom-1 right-1 bg-primary text-primary-foreground p-1.5 rounded-full shadow-md">
+              <Award size={18} />
+            </div>
           </div>
-          <p className="font-bold text-xl mb-1">Budi Santoso</p>
-          <p className="text-sm" style={{ color: "hsl(var(--taupe))" }}>
-            Docker Certified Associate · DevOps Engineer
+
+          <h3 className="font-bold text-2xl mb-1">Instruktur Utama</h3>
+          <p className="text-sm font-medium mb-4" style={{ color: "hsl(var(--taupe))" }}>
+            Cloud, DevOps &amp; AI Specialist
           </p>
-          <div className="mt-4 flex justify-center gap-3 flex-wrap">
-            <span className="badge-sage">DCA</span>
-            <span className="badge-cream">CKA</span>
-            <span className="badge-taupe">AWS</span>
+
+          <div className="mt-4 flex justify-center gap-2 flex-wrap">
+            <span className="badge-sage flex items-center gap-1.5 px-3 py-1">
+              <Award size={14} /> AWS CCP
+            </span>
           </div>
         </div>
 
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Tentang <span className="glow-text">Instruktur</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            Seorang engineer dengan pengalaman luas di containerization, CI/CD pipeline,
-            dan cloud infrastructure. Bergabunglah dan pelajari Docker dari orang
-            yang sudah menerapkannya di production setiap hari.
+            Seorang praktisi dan mentor dengan keahlian lintas disiplin di bidang teknologi modern. Siap membimbing kamu menguasai Docker dari konsep dasar hingga implementasi di dunia industri.
           </p>
-          <ul className="space-y-4">
-            {bullets.map(({ icon: Icon, text }) => (
-              <li key={text} className="flex items-center gap-3 text-muted-foreground">
-                <Icon className="text-primary shrink-0" size={20} />
-                {text}
-              </li>
-            ))}
-          </ul>
+
+          <div className="space-y-4">
+            <h4 className="font-semibold text-sm uppercase tracking-wider text-muted-foreground">
+              Skills &amp; Keahlian
+            </h4>
+            <ul className="space-y-3">
+              {skillNotes.map(({ icon: Icon, title, desc }) => (
+                <li key={title} className="flex items-start gap-3 glass-card p-3.5 rounded-xl border border-primary/10 hover:border-primary/30 transition-all">
+                  <div className="p-2 rounded-lg bg-primary/15 text-primary shrink-0 mt-0.5">
+                    <Icon size={18} />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground text-sm">{title}</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">{desc}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
