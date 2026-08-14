@@ -6,95 +6,85 @@
 
 /* 
   Color Palette:
-  #C2DED1 — Sage Mint       → HSL 158 34% 81%
-  #ECE5C7 — Warm Cream      → HSL  47 43% 86%
-  #CDC2AE — Warm Taupe      → HSL  36 22% 74%
-  #354259 — Deep Navy       → HSL 214 28% 28%
+  #F7F7F7 — Base Background → HSL   0  0% 97%
+  #FCD59B — Warm Peach      → HSL  36 94% 80%
+  #1FA8CF — Vibrant Cyan    → HSL 193 74% 47%
+  #2657C1 — Royal Deep Blue → HSL 221 67% 45%
 */
 
 @layer base {
   :root {
-    /* Deep Navy base */
-    --background:        214 28% 14%;
-    --foreground:         47 43% 92%;
+    /* Base background: #F7F7F7 */
+    --background:        0 0% 97%;
+    --foreground:        221 45% 14%;
 
-    --card:              214 28% 18%;
-    --card-foreground:    47 43% 92%;
+    /* Cards: Clean white with glass backdrop */
+    --card:              0 0% 100%;
+    --card-foreground:   221 45% 14%;
 
-    --popover:           214 28% 18%;
-    --popover-foreground: 47 43% 92%;
+    --popover:           0 0% 100%;
+    --popover-foreground:221 45% 14%;
 
-    /* Sage Mint as primary accent */
-    --primary:           158 34% 57%;
-    --primary-foreground: 214 28% 10%;
+    /* Primary: #2657C1 (Royal Deep Blue) */
+    --primary:           221 67% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary:         214 28% 22%;
-    --secondary-foreground: 47 30% 80%;
+    /* Secondary: Light cyan tint */
+    --secondary:         193 40% 93%;
+    --secondary-foreground: 221 67% 35%;
 
-    --muted:             214 28% 20%;
-    --muted-foreground:  36 22% 60%;
+    --muted:             210 20% 92%;
+    --muted-foreground:  221 25% 45%;
 
-    --accent:            158 34% 57%;
-    --accent-foreground: 214 28% 10%;
+    /* Accent: #1FA8CF (Vibrant Cyan) */
+    --accent:            193 74% 47%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive:       0 72% 60%;
-    --destructive-foreground: 47 43% 92%;
+    --destructive:       0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border:            214 28% 26%;
-    --input:             214 28% 26%;
-    --ring:              158 34% 57%;
+    --border:            221 30% 86%;
+    --input:             221 30% 86%;
+    --ring:              221 67% 45%;
     --radius:            0.75rem;
 
-    /* Sidebar tokens */
-    --sidebar-background:         214 28% 12%;
-    --sidebar-foreground:          47 43% 92%;
-    --sidebar-primary:            158 34% 57%;
-    --sidebar-primary-foreground: 214 28% 10%;
-    --sidebar-accent:             214 28% 22%;
-    --sidebar-accent-foreground:   47 30% 80%;
-    --sidebar-border:             214 28% 26%;
-    --sidebar-ring:               158 34% 57%;
-
     /* Custom tokens */
-    --glass-bg:   214 28% 18% / 0.65;
-    --glass-border: 158 34% 57% / 0.18;
-    --glow-sage:  158 34% 57%;
-    --surface:    214 28% 20%;
-    --surface-foreground: 47 30% 80%;
+    --glass-bg:          0 0% 100% / 0.85;
+    --glass-border:      221 67% 45% / 0.16;
+    --glow-cyan:         193 74% 47%;
+    --glow-royal:        221 67% 45%;
+    --glow-sage:         193 74% 47%;
+    --surface:           0 0% 100%;
+    --surface-foreground: 221 45% 14%;
 
     /* Palette direct refs */
-    --sage:       158 34% 81%;
-    --cream:       47 43% 86%;
-    --taupe:       36 22% 74%;
-    --navy:       214 28% 28%;
+    --base:              0 0% 97%;
+    --peach:             36 94% 80%;
+    --cyan:              193 74% 47%;
+    --royal:             221 67% 45%;
   }
 
-  .light {
-    --background:         47 43% 96%;
-    --foreground:        214 28% 16%;
-    --card:               0  0% 100%;
-    --card-foreground:   214 28% 16%;
-    --popover:            0  0% 100%;
-    --popover-foreground:214 28% 16%;
-    --primary:           214 28% 28%;
-    --primary-foreground: 47 43% 96%;
-    --secondary:          47 43% 90%;
-    --secondary-foreground:214 28% 28%;
-    --muted:              47 43% 90%;
-    --muted-foreground:   36 22% 42%;
-    --accent:            158 34% 57%;
-    --accent-foreground:  47 43% 96%;
-    --destructive:        0 72% 55%;
-    --destructive-foreground: 47 43% 96%;
-    --border:             36 22% 80%;
-    --input:              36 22% 80%;
-    --ring:              158 34% 57%;
+  .dark {
+    --background:        221 45% 10%;
+    --foreground:        0 0% 97%;
+    --card:              221 45% 14%;
+    --card-foreground:   0 0% 97%;
+    --popover:           221 45% 14%;
+    --popover-foreground:0 0% 97%;
+    --primary:           193 74% 47%;
+    --primary-foreground:221 45% 10%;
+    --secondary:         221 35% 20%;
+    --secondary-foreground: 0 0% 90%;
+    --muted:             221 35% 18%;
+    --muted-foreground:  221 20% 65%;
+    --accent:            36 94% 80%;
+    --accent-foreground: 221 45% 10%;
+    --border:            221 35% 25%;
+    --input:             221 35% 25%;
+    --ring:              193 74% 47%;
 
-    --glass-bg:    47 43% 96% / 0.8;
-    --glass-border: 36 22% 74% / 0.5;
-    --glow-sage:  158 34% 57%;
-    --surface:     47 43% 92%;
-    --surface-foreground: 214 28% 20%;
+    --glass-bg:          221 45% 14% / 0.85;
+    --glass-border:      193 74% 47% / 0.2;
   }
 }
 
@@ -113,7 +103,7 @@
 
 @layer components {
   .glass-card {
-    @apply rounded-xl border backdrop-blur-xl;
+    @apply rounded-xl border backdrop-blur-xl shadow-sm;
     background: hsla(var(--glass-bg));
     border-color: hsla(var(--glass-border));
   }
@@ -122,15 +112,15 @@
   }
   .glass-card-hover:hover {
     border-color: hsl(var(--primary) / 0.5);
-    box-shadow: 0 8px 32px hsl(var(--glow-sage) / 0.15), 0 0 0 1px hsl(var(--primary) / 0.15);
+    box-shadow: 0 10px 30px hsl(var(--royal) / 0.12), 0 0 0 1px hsl(var(--primary) / 0.2);
     transform: translateY(-4px);
   }
   .glow-button {
     @apply bg-primary text-primary-foreground font-semibold rounded-lg px-6 py-3 transition-all duration-300;
-    box-shadow: 0 0 20px hsl(var(--glow-sage) / 0.3);
+    box-shadow: 0 4px 20px hsl(var(--royal) / 0.35);
   }
   .glow-button:hover {
-    box-shadow: 0 0 40px hsl(var(--glow-sage) / 0.5);
+    box-shadow: 0 6px 30px hsl(var(--royal) / 0.5);
     transform: translateY(-2px);
   }
   .glow-text {
@@ -140,27 +130,28 @@
     @apply py-20 md:py-28 px-4;
   }
   .gradient-bg {
-    background: radial-gradient(ellipse at 50% 0%, hsl(var(--glow-sage) / 0.07) 0%, transparent 65%);
+    background: radial-gradient(ellipse at 50% 0%, hsl(var(--cyan) / 0.08) 0%, transparent 70%),
+                radial-gradient(ellipse at 80% 50%, hsl(var(--peach) / 0.15) 0%, transparent 60%);
   }
 
   /* Badge pill */
-  .badge-sage {
+  .badge-sage, .badge-cyan {
     @apply inline-block text-xs font-semibold tracking-wide uppercase rounded-full px-3 py-1;
-    background: hsl(var(--sage) / 0.15);
-    border: 1px solid hsl(var(--sage) / 0.35);
-    color: hsl(var(--sage));
+    background: hsl(193 74% 47% / 0.12);
+    border: 1px solid hsl(193 74% 47% / 0.35);
+    color: hsl(193 74% 38%);
   }
-  .badge-cream {
+  .badge-cream, .badge-peach {
     @apply inline-block text-xs font-semibold tracking-wide uppercase rounded-full px-3 py-1;
-    background: hsl(var(--cream) / 0.12);
-    border: 1px solid hsl(var(--cream) / 0.3);
-    color: hsl(var(--cream));
+    background: hsl(36 94% 80% / 0.4);
+    border: 1px solid hsl(36 94% 65% / 0.6);
+    color: hsl(36 85% 30%);
   }
-  .badge-taupe {
+  .badge-taupe, .badge-royal {
     @apply inline-block text-xs font-semibold tracking-wide uppercase rounded-full px-3 py-1;
-    background: hsl(var(--taupe) / 0.12);
-    border: 1px solid hsl(var(--taupe) / 0.3);
-    color: hsl(var(--taupe));
+    background: hsl(221 67% 45% / 0.12);
+    border: 1px solid hsl(221 67% 45% / 0.35);
+    color: hsl(221 67% 45%);
   }
 }
 

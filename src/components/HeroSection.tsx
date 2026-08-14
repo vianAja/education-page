@@ -14,13 +14,13 @@ const HeroSection = ({ onOpenModal }: HeroSectionProps) => (
 
     {/* Glow orbs */}
     <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full blur-[150px] animate-pulse-glow"
-      style={{ background: "hsl(158 34% 57% / 0.08)" }} />
+      style={{ background: "hsl(193 74% 47% / 0.15)" }} />
     <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full blur-[120px] animate-pulse-glow"
-      style={{ background: "hsl(214 28% 28% / 0.15)", animationDelay: "1.5s" }} />
+      style={{ background: "hsl(221 67% 45% / 0.15)", animationDelay: "1.5s" }} />
 
     <div className="relative z-10 text-center max-w-4xl mx-auto">
       {/* Badge */}
-      <span className="badge-sage mb-6 inline-block">
+      <span className="badge-peach mb-6 inline-block">
         🐳 Modul 7 — Docker &amp; Containerization
       </span>
 
@@ -28,7 +28,7 @@ const HeroSection = ({ onOpenModal }: HeroSectionProps) => (
         Kuasai{" "}
         <span className="glow-text">Docker</span>
         {" "}dari Nol<br />
-        <span className="text-3xl md:text-4xl font-bold" style={{ color: "hsl(var(--taupe))" }}>
+        <span className="text-3xl md:text-4xl font-bold text-primary">
           Hingga Siap Production 🚀
         </span>
       </h1>

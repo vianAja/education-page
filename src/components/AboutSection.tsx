@@ -42,12 +42,12 @@ const AboutSection = () => (
           </div>
 
           <h3 className="font-bold text-2xl mb-1">Instruktur Utama</h3>
-          <p className="text-sm font-medium mb-4" style={{ color: "hsl(var(--taupe))" }}>
+          <p className="text-sm font-medium mb-4 text-muted-foreground">
             Cloud, DevOps &amp; AI Specialist
           </p>
 
           <div className="mt-4 flex justify-center gap-2 flex-wrap">
-            <span className="badge-sage flex items-center gap-1.5 px-3 py-1">
+            <span className="badge-peach flex items-center gap-1.5 px-3 py-1 font-semibold">
               <Award size={14} /> AWS CCP
             </span>
           </div>
