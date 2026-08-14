@@ -22,29 +22,30 @@ const LeadCaptureModal = ({ open, onClose }: LeadCaptureModalProps) => {
         >
           <X size={20} />
         </button>
+        <div className="text-4xl mb-3">🐳</div>
         <h3 className="text-2xl font-bold mb-2">
-          Get Free Cyber Security <span className="glow-text">Starter Kit</span>
+          Dapatkan <span className="glow-text">Docker Starter Kit</span> Gratis
         </h3>
         <p className="text-sm text-muted-foreground mb-6">
-          Download our free guide to kickstart your cybersecurity journey.
+          Cheatsheet perintah Docker, contoh Dockerfile siap pakai, dan panduan setup awal — gratis untuk kamu.
         </p>
         <div className="space-y-4">
           <input
             type="email"
-            placeholder="Email address"
+            placeholder="Alamat email kamu"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
           />
           <input
             type="text"
-            placeholder="WhatsApp number (optional)"
+            placeholder="Nomor WhatsApp (opsional)"
             value={whatsapp}
             onChange={(e) => setWhatsapp(e.target.value)}
             className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
           />
           <button className="glow-button w-full py-4 text-lg">
-            Download Now
+            Download Gratis Sekarang
           </button>
         </div>
       </div>

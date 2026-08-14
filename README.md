@@ -1,41 +1,103 @@
-# CyberSec – Course Landing Page template Free
+# DockerLearn — Platform Belajar Docker untuk Developer Indonesia
 
-#### Preview
+Platform edukasi Docker & containerization berbasis React + Vite, dengan color palette **nature-tech** yang premium.
 
- - [Demo](https://themewagon.github.io/cybersec/)
+## 🎨 Color Palette
 
-#### Download
- - [Download from ThemeWagon](https://themewagon.com/themes/cybersec/)
+| Warna | Hex | HSL | Penggunaan |
+|-------|-----|-----|------------|
+| Sage Mint | `#C2DED1` | `158 34% 81%` | Badge, glow accent |
+| Warm Cream | `#ECE5C7` | `47 43% 86%` | Text, secondary badge |
+| Warm Taupe | `#CDC2AE` | `36 22% 74%` | Muted text, tertiary badge |
+| Deep Navy | `#354259` | `214 28% 28%` | Background base |
 
-## Getting Started
+## 🚀 Deploy ke Vercel
 
-1. Clone Repository
+### 1. Push ke GitHub
+```bash
+git init
+git add .
+git commit -m "feat: initial docker education page"
+git remote add origin https://github.com/USERNAME/education-page.git
+git push -u origin main
 ```
-git clone https://github.com/themewagon/cybersec.git
+
+### 2. Deploy ke Vercel
+
+**Cara A — Via Vercel Dashboard:**
+1. Login ke [vercel.com](https://vercel.com)
+2. Klik **Add New → Project**
+3. Import repo dari GitHub
+4. Framework akan terdeteksi otomatis sebagai **Vite**
+5. Klik **Deploy** — selesai!
+
+**Cara B — Via Vercel CLI:**
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy dari direktori project
+vercel
+
+# Atau langsung ke production
+vercel --prod
 ```
-2. Install Dependencies
-```
-npm i
-```
-3. Run the development server:
+
+File `vercel.json` sudah dikonfigurasi dengan:
+- ✅ SPA routing (semua path redirect ke `index.html`)
+- ✅ Asset caching 1 tahun untuk file statis
+- ✅ Framework Vite auto-detect
+
+## 🛠️ Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Jalankan dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build production
+npm run build
+
+# Preview build
+npm run preview
 ```
 
-## Author 
+## 📁 Struktur Proyek
+
 ```
-Design and code is completely written by codescandy and development team. 
+education-page/
+├── src/
+│   ├── components/       # Semua komponen React
+│   │   ├── Navbar.tsx
+│   │   ├── HeroSection.tsx
+│   │   ├── AboutSection.tsx
+│   │   ├── SkillsSection.tsx
+│   │   ├── ProgramsSection.tsx
+│   │   ├── CurriculumSection.tsx
+│   │   ├── PricingSection.tsx
+│   │   ├── DashboardPreview.tsx
+│   │   ├── TestimonialsSection.tsx
+│   │   ├── BlogSection.tsx
+│   │   ├── FAQSection.tsx
+│   │   ├── CTASection.tsx
+│   │   └── FooterSection.tsx
+│   ├── pages/
+│   │   ├── Index.tsx     # Landing page
+│   │   └── Materi.tsx    # Materi Docker lengkap
+│   └── index.css         # Design tokens & global styles
+├── vercel.json           # Konfigurasi Vercel
+├── .gitignore
+└── package.json
 ```
 
-## License
+## 📚 Materi Docker yang Tersedia
 
- - Design and Code is Copyright &copy; <a href="https://codescandy.com/" target="_blank">codescandy</a>
- - Licensed cover under [MIT]
- - Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+- ✅ Apa itu Docker & container
+- ✅ Container vs Virtual Machine
+- ✅ Arsitektur Docker Engine
+- ✅ Instalasi Docker (Linux, Windows, macOS)
+- ✅ Perintah dasar Docker (12 perintah)
+- ✅ Quiz interaktif
+- ✅ Referensi lanjutan

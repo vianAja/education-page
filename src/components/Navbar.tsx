@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun, Container } from "lucide-react";
 
 const navLinks = ["About", "Courses", "Curriculum", "Pricing", "Blog", "FAQ"];
 
@@ -45,8 +45,9 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4">
-        <a href="#" className="text-xl font-bold glow-text">
-          CyberSec
+        <a href="#" className="flex items-center gap-2 text-xl font-extrabold glow-text tracking-tight">
+          <Container size={22} className="text-primary" />
+          DockerLearn
         </a>
 
         {/* Desktop */}
@@ -76,7 +77,7 @@ const Navbar = () => {
             {isDark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
           <a href="/#pricing" className="glow-button text-sm">
-            Enroll Now
+            Mulai Belajar
           </a>
         </div>
 
@@ -111,7 +112,7 @@ const Navbar = () => {
             Materi
           </Link>
           <a href="/#pricing" className="glow-button block text-center mt-3 text-sm">
-            Enroll Now
+            Mulai Belajar
           </a>
         </div>
       )}
