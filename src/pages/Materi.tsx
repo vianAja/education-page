@@ -171,7 +171,7 @@ const Materi = () => {
             to="/"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-6"
           >
-            <ArrowLeft size={16} /> Kembali ke beranda
+            <ArrowLeft size={16} />
           </Link>
 
           <span className="inline-block text-xs font-semibold tracking-wide uppercase text-primary bg-primary/10 border border-primary/20 rounded-full px-3 py-1 mb-4">
@@ -200,8 +200,6 @@ const Materi = () => {
               <li><a className="text-muted-foreground hover:text-primary transition-colors" href="#arsitektur">Bagaimana Docker Bekerja</a></li>
               <li><a className="text-muted-foreground hover:text-primary transition-colors" href="#instalasi">Instalasi Docker</a></li>
               <li><a className="text-muted-foreground hover:text-primary transition-colors" href="#perintah-dasar">Perintah Dasar yang Wajib Dihafal</a></li>
-              <li><a className="text-muted-foreground hover:text-primary transition-colors" href="#video">Video Pendukung</a></li>
-              <li><a className="text-muted-foreground hover:text-primary transition-colors" href="#audio">Versi Audio (Dengar Sambil Jalan)</a></li>
               <li><a className="text-muted-foreground hover:text-primary transition-colors" href="#kuis">Cek Pemahaman</a></li>
               <li><a className="text-muted-foreground hover:text-primary transition-colors" href="#referensi">Referensi Lanjutan</a></li>
             </ol>
@@ -400,52 +398,10 @@ const Materi = () => {
             </div>
           </section>
 
-          {/* 6. video */}
-          <section id="video" className="mb-14 scroll-mt-24">
-            <h2 className="text-2xl font-bold mb-4">6. Video Pendukung</h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Buat yang lebih nyaman belajar sambil lihat prosesnya langsung, berikut cuplikan pemakaian
-              player video di materi ini. <em>Catatan untuk pengajar:</em> ganti berkas di{" "}
-              <code className="px-1.5 py-0.5 rounded bg-secondary text-primary text-sm">public/videos/</code>{" "}
-              dengan rekaman tutorial instalasi/demo Docker milikmu sendiri.
-            </p>
-            <div className="glass-card p-3">
-              <video
-                controls
-                preload="metadata"
-                poster="/placeholder.svg"
-                className="w-full rounded-lg"
-              >
-                <source
-                  src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                  type="video/mp4"
-                />
-                Browser kamu tidak mendukung tag video.
-              </video>
-              <p className="text-xs text-muted-foreground/70 mt-2 flex items-center gap-1.5">
-                <PlayCircle size={13} /> Video placeholder — silakan ganti dengan rekaman tutorial Docker aslinya.
-              </p>
-            </div>
-          </section>
 
-          {/* 7. audio */}
-          <section id="audio" className="mb-14 scroll-mt-24">
-            <h2 className="text-2xl font-bold mb-4">7. Versi Audio (Dengar Sambil Jalan)</h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Ringkasan materi ini juga tersedia dalam bentuk audio, buat yang lebih suka dengar daripada
-              baca — misalnya sambil di perjalanan. Sama seperti video, berkas di bawah ini masih placeholder.
-            </p>
-            <div className="glass-card p-5">
-              <audio controls className="w-full">
-                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
-                Browser kamu tidak mendukung tag audio.
-              </audio>
-            </div>
-          </section>
-
-          {/* 8. kuis */}
+          {/* 6. kuis */}
           <section id="kuis" className="mb-14 scroll-mt-24">
-            <h2 className="text-2xl font-bold mb-4">8. Cek Pemahaman</h2>
+            <h2 className="text-2xl font-bold mb-4">6. Cek Pemahaman</h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
               Lima pertanyaan singkat, tidak dinilai secara resmi — ini cuma buat ngecek apakah konsep
               dasarnya sudah nyantol atau belum sebelum lanjut ke materi berikutnya.
@@ -558,9 +514,9 @@ const Materi = () => {
             </form>
           </section>
 
-          {/* 9. referensi */}
+          {/* 7. referensi */}
           <section id="referensi" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold mb-4">9. Referensi Lanjutan</h2>
+            <h2 className="text-2xl font-bold mb-4">7. Referensi Lanjutan</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Materi di atas sengaja dibuat ringkas. Untuk pendalaman, beberapa sumber berikut cukup
               relevan dan gratis diakses:
@@ -600,7 +556,7 @@ const Materi = () => {
 
             <div className="mt-10 pt-6 border-t border-border/60">
               <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-                <ArrowLeft size={16} /> Kembali ke beranda
+                <ArrowLeft size={16} />
               </Link>
             </div>
           </section>
